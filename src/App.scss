@@ -1,0 +1,88 @@
+$zing-Red: #c7001c;
+$zing-Slate: #2b3040;
+$zing-Grey: #4a4a4a;
+$zing-MidGrey: #b2b2b2;
+$zing-LightGrey: #dadada;
+$zing-Yolk: #fab400;
+$zing-Dragonfruit: #de007e;
+$zing-Avocado: #9bbd1e;
+
+.app {
+    background-color: $zing-Slate;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 80px;
+    grid-template-rows: 50px auto 100px 50px;
+    grid-template-areas:
+        ". . . ."
+        ". leftcol rightcol ."
+        ". footer footer ."
+        ". . . .";
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.card {
+    background-color: $zing-LightGrey;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-card {
+    grid-area: leftcol;
+
+    pre {
+        background: $zing-Grey;
+        color: white;
+        padding: 1rem;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+}
+
+.demo-card {
+    grid-area: rightcol;
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    li {
+        background: $zing-Red;
+        color: white;
+        font-size: 1.3rem;
+        width: 100%;
+        padding: 1rem;
+        margin: 1rem;
+        text-align: center;
+        cursor: pointer;
+        box-shadow: 2px 2px 5px $zing-Grey;
+        border-radius: 5px;
+    }
+
+    img {
+        height: 200px;
+    }
+}
+
+.footer-card {
+    grid-area: footer;
+    flex-direction: row;
+
+    a {
+        margin: 1rem;
+        font-size: 2rem;
+        font-weight: 500;
+        text-decoration: none;
+        &:hover,
+        &:visited,
+        &:active,
+        &:focus {
+            color: $zing-Red;
+        }
+    }
+}
