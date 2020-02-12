@@ -27,6 +27,17 @@ export default function createServer() {
             const user = JSON.stringify(USERS[idParameter]);
             return [200, { "Content-Type": "application/json" }, user];
         })
+
+        this.get("/comments", (res) => {
+            return [
+                200,
+                { "content-type": "application/json" },
+                JSON.stringify([
+                    { name: "Fred", comment: "This is a comment" },
+                    { name: "Fred", comment: "Hello World" }
+                ])
+            ];
+        })
     });
 
     return server;
