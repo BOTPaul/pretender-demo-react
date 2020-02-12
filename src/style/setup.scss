@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+// BULMA OVERRIDES
+$primary: $zing-Slate;
+$grey-light: $zing-LightGrey;
+$danger: $zing-Dragonfruit;
+$success: $zing-Avocado;
+$warning: $zing-Yolk;
+
+@import "bulma/bulma.sass";
+
+$fa-font-path: "../webfonts";
+@import "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "@fortawesome/fontawesome-free/scss/solid.scss";
